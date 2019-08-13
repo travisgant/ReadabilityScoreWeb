@@ -1,0 +1,47 @@
+{
+  "text": "There are few desires more deeply human than the desire to escape whatever reality you’re in. The problem is not the details of any particular life — and the nicer your life is, the more resources you have to escape it — but rather the limits of being a person. You are stuck with you.",
+  "spans": [
+    {
+      "start": 0,
+      "end": 93
+    },
+    {
+      "start": 94,
+      "end": 261
+    },
+    {
+      "start": 262,
+      "end": 285
+    },
+    {
+      "start": 286,
+      "end": 342
+    },
+    {
+      "start": 344,
+      "end": 447
+    },
+    {
+      "start": 448,
+      "end": 682
+    }
+  ],
+  "statistics": {
+    "sentence_count": 302,
+    "word_count": 5145,
+    "character_count": 23215,
+    "syllable_count": 7496,
+    "polysyllable_count": 565,
+    "avg_words_per_sentence": 17.0364238410596,
+    "avg_characters_per_word": 4.512147716229349,
+    "avg_syllables_per_word": 4.512147716229349
+  },
+  "readability": {
+    "fre_score": 66.28518723572685,
+    "fkgl_score": 8.246197523474859,
+    "ari_score": 8.340427663970036,
+    "gfi_score": 11.207183724956398,
+    "cli_score": 8.993974732750242,
+    "smog_score": 10.94296112381399
+  }
+}

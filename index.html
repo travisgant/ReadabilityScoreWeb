@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Readability Score</title>
+
+  <!--  Styles  -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/refresh.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="navigation" class="navbar navbar-expanded-md">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon">
+        </button>
+        <a class="navbar-brand" href="/" id="navbar-company-name">Readability Score</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li class="page-scroll">
+            <a href="/measure">Measure</a>
+          </li>
+          <li class="page-scroll">
+            <a href="/#about">Help</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <section id="content" class="h-100">
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+
+
+        <div id="main" class="col-md-9">
+          <form id="document-form" action="/measure" method="post">
+            <textarea id="hiddenEditor" name="body" style="display: none;"></textarea>
+            <div id="editor"></div>
+            <button id="editorSubmit" type="submit" class="btn btn-lg btn-primary">Measure</button>
+          </form>
+        </div>
+
+
+        <div id="measure-results-statistics" class="col-md-3 overflow-auto">
+          <h4>Readability Scores</h4>
+          <table class="table table-bordered">
+            <thead>
+              <th>Scoring Method</th>
+              <th>Score</th>
+            </thead>
+            <tr>
+              <td>Flesch Reading Ease</td>
+              <td>fre_score</td>
+            </tr>
+          </table>
+          <h4>Readability Grade Level Scores</h4>
+          <table class="table table-bordered">
+            <thead>
+              <th>Scoring Method</th>
+              <th>Score</th>
+            </thead>
+            <tr>
+              <td>Flesch-Kincaid Grade Level</td>
+              <td>fkgl_score</td>
+            </tr>
+            <!-- <tr><td>Dale-Chall Readability Formula</td><td>N/A</td></tr> -->
+            <tr>
+              <td>Gunning Fog</td>
+              <td>gfi_score</td>
+            </tr>
+            <tr>
+              <td>SMOG</td>
+              <td>smog_score</td>
+            </tr>
+            <tr>
+              <td>Automated Readability Index</td>
+              <td>ari_score</td>
+            </tr>
+            <tr>
+              <td>Coleman-Liau Index</td>
+              <td>cli_score</td>
+            </tr>
+            <tr>
+              <td>Average Grade Level</td>
+              <td>readability_grade_level_avg</td>
+            </tr>
+          </table>
+          <h4>Text Statistics</h4>
+          <table class="table table-bordered">
+            <!-- TODO Paragraph Count -->
+            <tr>
+              <td>Sentences</td>
+              <td>sentence_count</td>
+            </tr>
+            <tr>
+              <td>Words</td>
+              <td>word_count</td>
+            </tr>
+            <tr>
+              <td>Syllables</td>
+              <td>syllable_count</td>
+            </tr>
+            <tr>
+              <td>Characters</td>
+              <td>character_count</td>
+            </tr>
+            <tr>
+              <td>Difficult Words</td>
+              <td>polysyllable_word_count</td>
+            </tr>
+            <tr>
+              <td>Lexical Density</td>
+              <td>lexical_density</td>
+            </tr>
+            <!-- <tr><td>Long Sentences</td><td>N/A</td></tr> -->
+          </table>
+          <h4>Timing</h4>
+          <table class="table table-bordered">
+            <tr>
+              <td>Reading Time</td>
+              <td>reading_time_seconds</td>
+            </tr>
+            <tr>
+              <td>Speaking Time</td>
+              <td>speaking_time_seconds</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+  <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+
+
+  <!-- Scripts -->
+  <script src="scripts/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+  background-color: #faf9f8;
+}
+
+#content {
+  padding-top: 25px;
+}
+
+/* Typography */
+
+/* Navigation */
+.navbar-custom {
+  background: #1b2637;
+  font-weight: bold;
+  border: none;
+}
+
+/* Measure Results */
+#measure-results-statistics {
+  text-align: center;
+}
+
+#measure-results-statistics td {
+  text-align: left;
+}
+
+#measure-results-statistics h4 {
+  margin-top: 0px;
+}
+
+#measure-results-statistics table {
+  background-color: #ffffff;
+}
+
+#measure-results-statistics table thead th:nth-child(2) {
+  width: 75px;
+  text-align: center;
+}
+
+#measure-results-statistics table td:nth-child(2) {
+  width: 75px;
+  text-align: center;
+}
+
+/* Editor */
+#editor {
+  background-color: #ffffff;
+  overflow: auto;
+  white-space: pre-wrap;
+  resize: none;
+  padding: 20px;
+}
+
+#editor p {
+  font-size: 16px;
+  line-height: 2em;
+}
+
+#editorSubmit {
+  margin-top: 15px;
+}
+
+/* Editor > text suggestions */
+.highlight-long-sentence {
+  padding: 2px 0 4px 0;
+  border-bottom: 3px solid rgb(198, 90, 108);
+}

@@ -1,2 +1,0 @@
-# ReadabilityScoreWeb
-Created with CodeSandbox
